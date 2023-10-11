@@ -5,6 +5,7 @@ padding-top: 20px;
 }
 .geninfo {
     display: flex;
+    gap: 50px;
 }
 .info {
     width: 1459px;
