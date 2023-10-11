@@ -1,0 +1,14 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+padding-top: 20px;
+}
+.geninfo {
+    display: flex;
+}
+.info {
+    width: 1459px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}

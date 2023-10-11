@@ -1,8 +1,7 @@
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieCast, handleFetchError } from "services/movies-api";
-
+import css from './Cast.module.css'
 const endPoint = '/movie';
 
 const Cast = () => {
@@ -25,18 +24,17 @@ const Cast = () => {
         <h3>Cast:</h3>
         
         {cast.length !== 0 ?
-            <ul>
+            <ul className={css.cast}>
                 {cast.map(({ id, name, character, profile_path }) =>
                     <li key={id}>
-                        <b>{name}</b>
-                        <p>Character: {character}</p>
+                        <p>{name} / {character}</p>
                         <img src={profile_path ?
                         `http://image.tmdb.org/t/p/w185${profile_path}` :
                         'https://www.braasco.com//ASSETS/IMAGES/ITEMS/ZOOM/no_image.jpeg'}
                         alt={name} width="100" height="150" />
                     </li>)}
             </ul> :
-            <p>Sorry! We don't have any information about cast</p>
+            <p>There is no information about the cast</p>
         }
     </>
 };

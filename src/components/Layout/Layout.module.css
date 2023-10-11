@@ -1,0 +1,16 @@
+header {
+    background-color: lightblue;
+    height: 40px;
+    border-bottom: 1px solid grey;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+padding-top: 10px;
+}
+a {
+    text-decoration: none;
+    color: darkslategrey;
+}

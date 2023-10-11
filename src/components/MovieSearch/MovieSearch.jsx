@@ -1,26 +1,24 @@
 import PropTypes from 'prop-types'
-
-const Searchbar = ({ onSubmitSearchBar, value }) => (
-    <header>
-    <form onSubmit={onSubmitSearchBar}>
-        <button>
-            <span>Search</span>
-        </button>
-
+import css from "./MovieSearch.module.css"
+const Searchbar = ({ onSubmit, value }) => (
+    <div className={css.container}>
+    <form onSubmit={onSubmit}>
         <input
             type="text"
             name="search"
             autoComplete="off"
             autoFocus
             defaultValue={value}
-            placeholder="Search movies"
         />
+         <button>
+            <span>Search</span>
+        </button>
     </form>
-    </header>
+    </div>
 );
 
 Searchbar.propTypes = {
-    onSubmitSearchBar: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired,
 };
 
 export default Searchbar;

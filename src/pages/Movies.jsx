@@ -28,7 +28,7 @@ const Movies = () => {
     
   }, [films, searchQuery]);
 
-  const onSubmitSearchBar = (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     const searchValue = form.search.value
@@ -54,7 +54,7 @@ const Movies = () => {
   };
 
   return <div>
-    <Searchbar onSubmitSearchBar={onSubmitSearchBar} value={searchQuery} />
+    <Searchbar onSubmit={onSubmit} value={searchQuery} />
     <section>
       <MoviesListing films={films} />
     </section>

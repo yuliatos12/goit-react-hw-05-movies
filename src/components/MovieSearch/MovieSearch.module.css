@@ -1,0 +1,14 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+padding-top: 10px;
+}
+input {
+    height: 30px;
+    width: 300px;
+}
+button {
+    height: 35px;
+    color: darkslategrey;
+    cursor: pointer;
+}

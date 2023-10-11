@@ -33,5 +33,5 @@ export async function getSearchMovies(endPoint, query) {
     return response.data;
 };
 export function handleFetchError() {
-   alert('Oops! Something went wrong! Try reloading the page or make another choice!');
+   alert('Something went wrong! Try reloading the page!');
 };
