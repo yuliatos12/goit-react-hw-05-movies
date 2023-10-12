@@ -1,13 +1,16 @@
 import { Outlet } from "react-router-dom"
 import { Suspense } from "react"; 
-import { Link } from "react-router-dom";
 import css from "./Layout.module.css"
+import { NavLinkStyled } from "./Layout.styled";
+
+
+    
 export const Layout = () => {
     return <>
         <header>
             <nav className={css.container}>
-            <Link to="/">Home</Link>
-                <Link to="/movies">Movies</Link>
+                <NavLinkStyled to="/">Home</NavLinkStyled>
+                <NavLinkStyled to="/movies">Movies</NavLinkStyled>
             </nav>
         </header>
         <main>
